@@ -39,3 +39,8 @@ Then just enable the *"Aggregate build flow test results"* post-build action:
 ## Version 1.0 (Nov 07, 2014)
 
 * Initial release of the plugin.
+
+## RPM build
+* Change the version of plugin in spec file
+* Update plugin %changelog in spec file
+* Rebuild rpm package with job build https://checklist.intgdc.com/job/tools/job/rpmbuild-el7-tools and merge
