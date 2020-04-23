@@ -1,8 +1,9 @@
 %global     plugin_name build-flow-test-aggregator
 Name:       jenkins-in-house-plugins-%{plugin_name}
 Version:    1.3
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    A jenkins in-house plugins %{plugin_name}.hpi
+Obsoletes:  jenkins-upstream-plugins-%{plugin_name} <= %{version}
 Requires:   jenkins
 Group:      Development/Libraries
 License:    BSD
@@ -33,7 +34,10 @@ mvn package
 %{_sharedstatedir}/juseppe/%{plugin_name}.hpi
 
 %changelog
-* Mon Apr 13 2020 +0700 tvhien <tranvanhien.engineer@gmail.com> - 1.3-2
+* Thu Apr 23 2020 +0700 Hien Tran <hien.tran@gooddata.com> - 1.3-3
+- CONFIG: SETI-4077 remove obsoletes package in spec file
+
+* Mon Apr 13 2020 +0700 Hien Tran <hien.tran@gooddata.com> - 1.3-2
 - CONFIG: SETI-4077 add build-flow-test-aggregator.spec and Makefile
 
 * Fri Sep 8 2017 +0700 Hung Cao Hiep <hung.cao@gooddata.com> - 1.3-1
